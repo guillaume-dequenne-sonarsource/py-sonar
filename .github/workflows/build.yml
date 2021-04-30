@@ -8,6 +8,13 @@ on:
 jobs:
   sonarcloud:
     name: SonarCloud
+        strategy:
+      matrix:
+        project_base_dir:
+          [
+            'module-a',
+            'module-b',
+          ]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
