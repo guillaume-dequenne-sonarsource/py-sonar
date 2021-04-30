@@ -8,13 +8,9 @@ on:
 jobs:
   sonarcloud:
     name: SonarCloud
-        strategy:
+    strategy:
       matrix:
-        project_base_dir:
-          [
-            'module-a',
-            'module-b',
-          ]
+        project_base_dir: ['module-a', 'module-b']
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
